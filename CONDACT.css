@@ -1,0 +1,91 @@
+.mySlides {display:none;}
+.w3-content {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* SLIDES */
+.mySlides {
+  display: none;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* SHOW FIRST IMAGE ON LOAD */
+.mySlides:first-child {
+  display: block;
+}
+
+/* BUTTONS */
+.w3-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color:black;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.w3-display-left {
+  left: 10px;
+}
+
+.w3-display-right {
+  right: 10px;
+}
+
+.w3-button:hover {
+  background: rgba(0,0,0,0.9);
+}
+.txt2{
+    text-align: center;
+}
+.imgcontainer2{
+  display: flex;
+}
+.imgrow1{
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin:20px
+}
+body{
+    background-color: #F8F4E3;
+}
+nav{
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+body{
+    background-color: #F8F4E3;
+}
+.img1{
+    width: 50px;
+}
+.ls1{
+    display: flex;
+    list-style: none;
+}
+.list1{
+    padding-right: 50px;
+    
+}
+.txt1{
+    text-decoration: none;
+    color: black;
+}
+.map{
+    background-color: #fff;
+    padding: 50px;
+    border: 2px solid black;
+}

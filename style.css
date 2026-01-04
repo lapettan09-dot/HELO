@@ -1,0 +1,162 @@
+nav{
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+body{
+    background-color: #F8F4E3;
+}
+.img1{
+    width: 50px;
+}
+.ls1{
+    display: flex;
+    list-style: none;
+}
+.list1{
+    padding-right: 50px;
+    
+}
+.txt1{
+    text-decoration: none;
+    color: black;
+}
+.mySlides {display:none;}
+.w3-content {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* SLIDES */
+.mySlides {
+  display: none;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* SHOW FIRST IMAGE ON LOAD */
+.mySlides:first-child {
+  display: block;
+}
+
+/* BUTTONS */
+.w3-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color:black;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.w3-display-left {
+  left: 10px;
+}
+
+.w3-display-right {
+  right: 10px;
+}
+
+.w3-button:hover {
+  background: rgba(0,0,0,0.9);
+}
+.txt2{
+    text-align: center;
+}
+.imgcontainer2{
+  display: flex;
+}
+.imgrow1{
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin:20px
+}
+.img2{
+  width:280px
+}
+.txtgroup1{
+  margin: 20px;
+}
+.imgcol1{
+  display: flex;
+  justify-content: center;
+}
+.divdev2{
+  margin-top: 200px;
+}
+.divdev3{
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+}
+.divdev31{
+  width: 50%;
+}
+.divdev32{
+  width: 50%;
+  background-color: #F8F4E3;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 50px;  
+}
+.txt3{
+  margin: 50px;
+  font-size: large;
+}
+.txt4{
+  text-align: center;
+  margin: 50px;
+}
+.img3{
+  margin: 50px;
+}
+footer{
+  background-color: #fff;
+  border:2px solid black;
+  margin: 50px 0 50px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.img5{
+  width: 200px;
+}
+.footdiv{
+  width: 50%;
+}
+.list2{
+  list-style: none;
+}
+.ls2{
+  padding-top: 20px;
+  font-size: medium;
+  margin: 50px;
+}
+.ls21{
+  font-size: large;
+  margin: 50px;
+}
+.footdev3{
+  background-color: #F8F4E3;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin: 50px;
+}
+.txt6{
+  text-align: center;
+}
+.footdev4{
+  margin: 20px;
+}
