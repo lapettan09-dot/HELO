@@ -1,121 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vainokki</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SunBath Style AI</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <nav>
-        <div class="divdev1">
-            <img src="logo.png" class="img1">
-        </div>
-        <div class="divdev11">
-            <ul class="ls1">
-                <li class="list1"><a href="#" class="txt1">HOME</a></li>
-                <li class="list1"><a href="#" class="txt1">CONTACT</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div><!--main-->
-        <div class="w3-content w3-display-container">
-            <img class="mySlides" src="s.png" style="width:385px">
-            <img class="mySlides" src="p.png" style="width:385px">
-            <img class="mySlides" src="a.png" style="width:385px">
-            <img class="mySlides" src="j.png" style="width:385px">
+  <header class="hero">
+    <h1>SunBath Style AI</h1>
+    <p>
+      Build an American-style, sun-bath-suitable outfit concept from a subject's existing dress profile.
+      Designed for fashion contest concept checking.
+    </p>
+  </header>
 
-            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-        </div>
-        <div class="divdev2">
-            <h1 class="txt2">OUR MEMBERS</h1>
-            <div class="imgcontainer2">
-                <div class="imgrow1">
-                    <div class="imgcol1"> 
-                        <img src="s.png" class="img2">
-                    </div>
-                    <div class="txtgroup1">
-                    <h3>SHIAVDEV</h3>
-                    <p>He feels like the anchor; someone whose presence is steady and respected, often providing the wisdom when the group needs to make a choice.</p>
-                    </div>
-                </div>
-                <div class="imgrow1">
-                    <div class="imgcol1"> 
-                        <img src="p.png" class="img2">
-                    </div>
-                    <div class="txtgroup1">
-                    <h3>PAVIN</h3>
-                    <p>He feels like the anchor; someone whose presence is steady and respected, often providing the wisdom when the group needs to make a choice.</p>
-                    </div>
-                </div>
-                <div class="imgrow1">
-                    <div class="imgcol1"> 
-                        <img src="j.png" class="img2">
-                    </div>
-                    <div class="txtgroup1">
-                    <h3>JENSON</h3>
-                    <p>He feels like the anchor; someone whose presence is steady and respected, often providing the wisdom when the group needs to make a choice.</p>
-                    </div>
-                </div>
-                <div class="imgrow1">
-                    <div class="imgcol1"> 
-                        <img src="a.png" class="img2">
-                    </div>
-                    <div class="txtgroup1">
-                    <h3>ASHMIN</h3>
-                    <p>He feels like the anchor; someone whose presence is steady and respected, often providing the wisdom when the group needs to make a choice.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="divdev3">
-            <div class="divdev31">
-                <img src="all.png" class="img3"> 
-            </div>
-            <div class="divdev32">
-                <h2 class="txt4">WE ALL</h2>
-                <p class="txt3"> The Apex Tech Collective stands as a formidable and highly synchronized digital alliance, uniting the unique talents of Shivadev, Ashmin, Jenson, and Pavin under a singular, high-tech banner. Defined by their striking silver phoenix emblem—a symbol of rebirth and soaring ambition—the group operates within a sophisticated cybernetic aesthetic that bridges the gap between professional eSports and cutting-edge software engineering. The intricate orbital rings and circuit-inspired details surrounding their logo signify a deep-rooted focus on technical precision, connectivity, and the relentless pursuit of digital excellence. By maintaining a cohesive visual identity across all members, the collective projects an image of unwavering discipline and strategic coordination, suggesting they are a force to be reckoned with in any competitive or creative arena. Whether they are dominating high-stakes gaming tournaments, collaborating on complex development projects, or pushing the boundaries of modern content creation, this group is built on a foundation of mutual growth, shared vision, and a shared passion for the future of technology.</p>
-            </div>
-        </div>
-    </div><!--main-->
-    <footer>
-        <div class="footdiv1">
-            <img src="logo.png" class="img5">
-        </div>
-        <div class="footdiv2">
-            <ul class="list2"> 
-                <li class="ls21">MENU</li>
-                <li class="ls2">HOME</li>
-                <li class="ls2">CONDACT</li>
-            </ul>
-        </div>
-        <div class="footdev3">
-            <div class="footdev4">
-                <h3 class="txt6">ADDRESS</h3>
-                <p class="txt5">Apex Tech Collective HQ Suite 404, Phoenix Tower 88 Cybernetics Plaza, Silicon District Neo-Tech City, 560001</p>
-            </div>
-        </div>
-    </footer>
-<script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
+  <main class="container">
+    <section class="panel">
+      <h2>Subject Inputs</h2>
+      <div class="grid">
+        <label>
+          Subject Name
+          <input id="name" type="text" placeholder="e.g., Model A" />
+        </label>
 
-    function plusDivs(n) {
-    showDivs(slideIndex += n);
+        <label>
+          Current Dress Description
+          <textarea id="currentDress" rows="3" placeholder="e.g., long floral maxi dress with full sleeves"></textarea>
+        </label>
+
+        <label>
+          Body Silhouette
+          <select id="silhouette">
+            <option>Balanced</option>
+            <option>Athletic</option>
+            <option>Curvy</option>
+            <option>Petite</option>
+            <option>Tall</option>
+          </select>
+        </label>
+
+        <label>
+          Skin Tone
+          <select id="skinTone">
+            <option>Fair</option>
+            <option>Medium</option>
+            <option>Olive</option>
+            <option>Tan</option>
+            <option>Deep</option>
+          </select>
+        </label>
+
+        <label>
+          Coverage Preference
+          <select id="coverage">
+            <option>Light</option>
+            <option>Moderate</option>
+            <option>High</option>
+          </select>
+        </label>
+
+        <label>
+          Style Mood
+          <select id="mood">
+            <option>Classic Miami</option>
+            <option>California Minimal</option>
+            <option>Retro Riviera</option>
+            <option>Luxury Resort</option>
+          </select>
+        </label>
+
+        <label>
+          Accent Color
+          <input id="accent" type="text" placeholder="e.g., coral" />
+        </label>
+
+        <label>
+          Subject Photo (optional)
+          <input id="photo" type="file" accept="image/*" />
+        </label>
+      </div>
+
+      <button id="generateBtn">Generate AI Style Conversion</button>
+      <p class="hint">Tip: Uploading a photo gives visual reference only in this demo. Final transformation is concept-level text output.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Visual Reference</h2>
+      <div id="previewWrap" class="preview-wrap">
+        <p class="empty">No image uploaded yet.</p>
+        <img id="preview" alt="Subject preview" />
+      </div>
+    </section>
+
+    <section class="panel" id="resultPanel">
+      <h2>AI Output</h2>
+      <div id="result" class="result empty">Fill details and click "Generate AI Style Conversion".</div>
+    </section>
+  </main>
+
+  <script>
+    const styleLibrary = {
+      Light: [
+        "high-waist bikini with soft drape mesh wrap",
+        "triangle bikini set with airy crochet shrug",
+        "sport-cut two-piece with translucent beach shirt"
+      ],
+      Moderate: [
+        "one-piece with side cut lines and matching sarong",
+        "tankini with high-leg bottom and lightweight kimono",
+        "square-neck monokini with waist tie cover-up"
+      ],
+      High: [
+        "elegant one-piece with UV-protective sheer overlay",
+        "modest swim dress with structured waist belt",
+        "longline swim top + skirted bottom with resort robe"
+      ]
+    };
+
+    const tonePalette = {
+      Fair: ["ocean blue", "cherry red", "black"],
+      Medium: ["coral", "teal", "white"],
+      Olive: ["mustard", "emerald", "ivory"],
+      Tan: ["turquoise", "sunset orange", "cream"],
+      Deep: ["gold", "hot pink", "cobalt"]
+    };
+
+    const photoInput = document.getElementById("photo");
+    const preview = document.getElementById("preview");
+    const previewWrap = document.getElementById("previewWrap");
+    const result = document.getElementById("result");
+
+    photoInput.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        preview.src = ev.target.result;
+        preview.style.display = "block";
+        const empty = previewWrap.querySelector(".empty");
+        if (empty) empty.remove();
+      };
+      reader.readAsDataURL(file);
+    });
+
+    function pickTopStyles(coverage) {
+      const options = styleLibrary[coverage] || styleLibrary.Moderate;
+      return options.map((name, i) => ({
+        name,
+        score: 92 - i * 5
+      }));
     }
 
-    function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
+    function generatePrompt(data, selectedStyle) {
+      return `Fashion model editorial photo, ${data.mood} American beach styling, convert ${data.currentDress || "current outfit"} into ${selectedStyle}, flattering for ${data.silhouette.toLowerCase()} silhouette, ${data.coverage.toLowerCase()}-coverage sun-bath suitable look, palette with ${data.mainColor} and ${data.accent || "neutral accent"}, premium fabric, realistic texture, contest-ready, natural sunlight, high detail.`;
     }
-    x[slideIndex-1].style.display = "block";  
-    }
-</script>
 
+    document.getElementById("generateBtn").addEventListener("click", () => {
+      const data = {
+        name: document.getElementById("name").value.trim() || "Subject",
+        currentDress: document.getElementById("currentDress").value.trim(),
+        silhouette: document.getElementById("silhouette").value,
+        skinTone: document.getElementById("skinTone").value,
+        coverage: document.getElementById("coverage").value,
+        mood: document.getElementById("mood").value,
+        accent: document.getElementById("accent").value.trim()
+      };
+
+      const palette = tonePalette[data.skinTone] || ["navy", "white", "gold"];
+      const mainColor = palette[0];
+      data.mainColor = mainColor;
+
+      const topStyles = pickTopStyles(data.coverage);
+      const prompt = generatePrompt(data, topStyles[0].name);
+
+      result.classList.remove("empty");
+      result.innerHTML = `
+        <h3>${data.name} — AI Style Conversion Report</h3>
+        <p><strong>Recommended Palette:</strong> ${palette.join(", ")}</p>
+        <p><strong>Top Picks:</strong></p>
+        <ul>
+          ${topStyles.map(style => `<li>${style.name} <span class="score">(${style.score}% match)</span></li>`).join("")}
+        </ul>
+        <p><strong>Transformation Notes:</strong> Shift silhouette lines from "${data.currentDress || "original dress"}" to a ${data.mood.toLowerCase()} aesthetic using breathable technical swim fabric and strategic contour seams.</p>
+        <p><strong>AI Prompt (for image model):</strong></p>
+        <textarea rows="5" readonly>${prompt}</textarea>
+        <p class="safe-note">Use only with participant consent and follow contest policy for AI-assisted visuals.</p>
+      `;
+    });
+  </script>
 </body>
 </html>
